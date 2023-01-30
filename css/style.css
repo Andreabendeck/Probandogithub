@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Contenedor padre  */
+.grid-container {
+    background-color: rgb(74, 156, 74);
+    border: 3px solid black;
+    /* Mostrate como una grilla */
+    display: grid;
+    /* width: 550px; Si quiero reducir el tamaño del espacio*/ 
+    /* Especificaciones de la grilla */
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+}
+
+.grid-container div{
+    border: 2px solid rgb(185, 185, 185) ;
+}
+
+/* GRID AREA */
+.grid-area-padre {
+    display: grid;
+    background-color: rgb(108, 179, 108);
+    border: 2px solid rgb(160, 159, 159);
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(4, 100px);
+    /* grid area */
+    grid-template-areas: 
+    "banana espinaca espinaca espinaca"
+    "banana pera pera kiwi"
+    "banana manzana manzana kiwi"
+    "zapallo zapallo zapallo zapallo"
+    ;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+}
+
+.banana {
+    background-color: yellow;
+    grid-area: banana;
+}
+.banana img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.espinaca {
+    background-color: rgb(21, 94, 21);
+    grid-area: espinaca;
+}
+
+.pera {
+    background-color: yellowgreen;
+    grid-area: pera;
+}
+
+.kiwi {
+    background-color: aqua;
+    grid-area: kiwi;
+}
+
+.manzana {
+    background-color: red;
+    grid-area: manzana;
+}
+
+.zapallo {
+    background-color: rgb(211, 120, 68);
+    grid-area: zapallo;
+}
+
+.zapallo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
