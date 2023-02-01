@@ -15,7 +15,7 @@
     grid-template-columns: 2fr 1fr 2fr;
     grid-template-rows: auto;
     justify-items: center;
-    align-items: center;
+    align-items:flex-end;
 }
 
 .grid-container div{
